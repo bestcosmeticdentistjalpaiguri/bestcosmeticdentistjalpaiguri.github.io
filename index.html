@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <meta name="google-site-verification" content="hOPJVnxeH9MyLDNFi8Cx1EI46kEUhj24S7woc-uKAgw" />
+
     <title>Cosmetic Dentist Jalpaiguri | #1 Digital Smile Makeover Studio</title>
-    <meta name="description" content="Jalpaiguri’s Premier Cosmetic Dental Center. Dr. S. Roy (Sr. Dental Surgeon) specializes in Digital Smile Makeovers, Veneers, and Gap Closure.">
+    <meta name="description" content="Jalpaiguri’s Premier Cosmetic Dental Center. Dr. S. Roy (Sr. Dental Surgeon) specializes in Digital Smile Makeovers, Veneers, and Gap Closure. 27+ Years Experience.">
     <meta name="keywords" content="Cosmetic Dentist Jalpaiguri, Smile Makeover, Digital Smile Design, Veneers, Gap Teeth Fix, Dr Sudip Roy, Dental Surgeon, Esthetic Dentistry">
     
     <meta property="og:title" content="Dr. S. Roy | #1 Cosmetic Dentist & Smile Designer">
@@ -13,8 +15,6 @@
     <meta property="og:image" content="logo.png">
     <meta property="og:url" content="https://bestcosmeticdentistjalpaiguri.github.io/">
     <meta property="og:type" content="website">
-    
-    <link rel="canonical" href="https://bestcosmeticdentistjalpaiguri.github.io/" />
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
@@ -116,16 +116,13 @@
         canvas { max-width: 100%; height: auto; cursor: crosshair; }
         .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
         .control-label { display: block; font-size: 12px; color: #999; margin-bottom: 5px; }
-        input[type="text"], input[type="number"], select { background: #222; border: 1px solid #444; color: white; padding: 8px; border-radius: 4px; width: 100%; box-sizing: border-box; }
+        input[type="text"], input[type="number"], input[type="password"], select { background: #222; border: 1px solid #444; color: white; padding: 8px; border-radius: 4px; width: 100%; box-sizing: border-box; }
         .app-btn { background: var(--gold); border: none; padding: 8px 16px; color: #000; font-weight: bold; border-radius: 4px; cursor: pointer; }
         .app-btn:hover { background: #fff; }
         .app-btn-sec { background: transparent; border: 1px solid #555; color: #ccc; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
         #loading { display: none; position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); color:var(--gold); align-items:center; justify-content:center; flex-direction:column; z-index:10; font-weight:bold; }
-        
-        /* KEY MODAL */
         #keyModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 10000; justify-content: center; align-items: center; }
         .modal-box { background: #222; padding: 30px; border: 1px solid var(--gold); border-radius: 8px; max-width: 400px; text-align: center; }
-        
         #aiResultModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 10001; justify-content: center; align-items: center; padding: 20px; }
         .ai-result-box { background: #1a1a1a; border: 2px solid var(--gold); padding: 30px; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; color: #ddd; line-height: 1.6; border-radius: 8px; white-space: pre-line; }
         .export-label { font-size:11px; color:#aaa; text-transform:uppercase; margin-bottom:5px; display:block; }
@@ -200,31 +197,13 @@
         <div class="panel"><div class="control-label">1. Upload Patient Photo (Frontal Smile)</div><input type="file" id="imgUpload" accept="image/*" class="app-btn-sec" style="width:100%"></div>
         <div class="canvas-wrap" id="canvasContainer"><canvas id="dsdCanvas"></canvas><div id="placeholder" style="color:#666;">No Image Loaded</div><div id="loading">✨ GENERATING AI PROTOCOL...<br><span style="font-size:10px; color:#aaa;">Please wait</span></div></div>
         <div class="panel"><div class="control-label">2. DSD Tools</div><div class="controls"><button onclick="toggleOverlay('grid')" class="app-btn-sec">Grid</button><button onclick="toggleOverlay('midline')" class="app-btn-sec">Midline</button><button onclick="toggleOverlay('golden')" class="app-btn-sec">Golden Ratio</button><button onclick="clearOverlays()" class="app-btn-sec">Clear</button></div></div>
-        <div class="panel" style="border: 1px solid var(--accent);"><div class="control-label" style="color:var(--accent);">3. AI CLINICAL ANALYSIS</div>
-            <select id="aiPrompt" style="margin-bottom:10px;">
-                <optgroup label="ESTHETICS">
-                    <option value="dsd_master">✨ Ultra-Realistic DSD (8K Protocol)</option>
-                    <option value="hollywood">🌟 Hollywood Smile (BL1 Shade)</option>
-                    <option value="natural">🍃 Natural Smile Design (A1/B1)</option>
-                    <option value="gummy">💧 Gummy Smile Correction</option>
-                </optgroup>
-                <optgroup label="RESTORATIVE">
-                    <option value="comprehensive">🦷 Comprehensive Rehab Plan</option>
-                    <option value="fracture">🔨 Class IV Fracture Repair</option>
-                </optgroup>
-                <optgroup label="ORTHODONTICS">
-                    <option value="diastema">📏 Diastema Closure (Gap)</option>
-                    <option value="crowding">🌀 Crowding / Alignment</option>
-                </optgroup>
-            </select>
-            <button onclick="runAI()" class="app-btn" style="width:100%; background:var(--accent); color:black;">✨ AI Magic Makeover</button>
-        </div>
+        <div class="panel" style="border: 1px solid var(--accent);"><div class="control-label" style="color:var(--accent);">3. AI CLINICAL ANALYSIS</div><select id="aiPrompt" style="margin-bottom:10px;"><optgroup label="ESTHETICS"><option value="dsd_master">✨ Ultra-Realistic DSD (8K Protocol)</option><option value="hollywood">🌟 Hollywood Smile (BL1 Shade)</option><option value="natural">🍃 Natural Smile Design (A1/B1)</option><option value="gummy">💧 Gummy Smile Correction</option></optgroup><optgroup label="RESTORATIVE"><option value="comprehensive">🦷 Comprehensive Rehab Plan</option><option value="fracture">🔨 Class IV Fracture Repair</option></optgroup><optgroup label="ORTHODONTICS"><option value="diastema">📏 Diastema Closure (Gap)</option><option value="crowding">🌀 Crowding / Alignment</option></optgroup></select><button onclick="runAI()" class="app-btn" style="width:100%; background:var(--accent); color:black;">✨ AI Magic Makeover</button></div>
         
         <div class="panel" style="border: 1px solid var(--gold); margin-top:15px;">
             <div class="control-label" style="color:var(--gold);">4. SOCIAL MEDIA EXPORT 📸</div>
             <label class="export-label" style="color:#aaa; font-size:10px;">Watermark Text:</label>
             <input type="text" id="watermarkText" value="Dr. S. Roy's SMILE Clinic | 8918935056" style="margin-bottom:10px;">
-            <div class="controls">
+            <div class="controls" style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
                 <button onclick="downloadSocial(false)" class="app-btn-sec">Save Single</button>
                 <button onclick="downloadSocial(true)" class="app-btn-sec">Save 1:1</button>
                 <button onclick="downloadComparison()" class="app-btn" style="grid-column: span 2; background:var(--gold); color:black; font-weight:800;">📸 Generate Before/After</button>
@@ -232,7 +211,7 @@
         </div>
     </div>
 
-    <div id="keyModal"><div class="modal-box"><h3>🔐 Doctor Authentication</h3><p style="color:#aaa; font-size:12px;">Enter the secure access code sent to your official email.</p><input type="password" id="apiKeyInput" placeholder="••••••••"><button onclick="saveKey()" class="app-btn">Verify & Login</button><button onclick="closeKeyModal()" class="app-btn-sec" style="margin-top:10px;">Cancel</button></div></div>
+    <div id="keyModal"><div class="modal-box"><h3>🔐 Doctor Authentication</h3><p style="color:#aaa; font-size:12px;">Enter the secure access code sent to your official email.</p><input type="password" id="apiKeyInput" placeholder="••••••••"><button onclick="saveKey()" class="app-btn" style="margin-top:15px;">Verify & Login</button><button onclick="closeKeyModal()" class="app-btn-sec" style="margin-top:10px;">Cancel</button></div></div>
     <div id="aiResultModal"><div class="ai-result-box"><h3 style="color:var(--accent); margin-top:0;">🤖 DentAi Analysis</h3><div id="aiOutputText"></div><button onclick="document.getElementById('aiResultModal').style.display='none'" class="app-btn" style="margin-top:20px; width:100%;">CLOSE</button></div></div>
 
     <script>
@@ -254,6 +233,7 @@
             "crowding": "QW5hbHl6ZSB0aGUgYW50ZXJpb3IgY3Jvd2RpbmcuIElzIHRoaXMgY2FzZSBzdWl0YWJsZSBmb3IgQ2xlYXIgQWxpZ25lcnMgKEludmlzYWxpZ24pIG9yIGRvZXMgaXQgcmVxdWlyZSBmaXhlZCBicmFjZXM/IEVzdGltYXRlIHRyZWF0bWVudCB0aW1lLg=="
         };
 
+        // --- LOGIC ---
         document.getElementById('secretTrigger').addEventListener('click', function() { tapCount++; if(tapCount === 5) { let pass = prompt("Enter Doctor Passcode:"); if(btoa(pass) === SECRET_HASH) { document.getElementById('doctorApp').style.display = 'block'; window.scrollTo(0,0); } else { alert("⛔ Access Denied"); } tapCount = 0; } setTimeout(() => tapCount = 0, 2000); });
         function lockApp() { document.getElementById('doctorApp').style.display = 'none'; }
         function openKeyModal() { document.getElementById('keyModal').style.display = 'flex'; }
